@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+</head>
+<body>
+
+    <h2>SIGN UP FORM</h2>
+
+    <form action="DAY6(login).html">
+
+        <label for="username">Name: </label>
+        <input type="text" id="username" name="username" placeholder="Enter Your Name" required>
+        <br><br>
+
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+        <br><br>
+
+        <label for="number">Mobile Number: </label>
+        <input type="tel" id="number" name="phone" pattern="[0-9]{10}" placeholder="Enter your Phone Number" required>
+        <br><br>
+
+        <label>Gender: </label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+
+        <label for="date">Date of Birth: </label>
+        <input type="date" id="date" name="dob" required>
+        <br><br>
+
+        <label for="hobby">Hobby: </label>
+        <select id="hobby" name="hobby">
+            <option value="">-- Select your hobby --</option>
+            <option value="drawing">🎨 Drawing / Painting</option>
+            <option value="music">🎵 Listening to music</option>
+            <option value="reading">📚 Reading books</option>
+            <option value="sports">⚽ Playing sports</option>
+            <option value="coding">💻 Coding</option>
+        </select>
+        <br><br>
+
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" minlength="3" maxlength="10" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>
