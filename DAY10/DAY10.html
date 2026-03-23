@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        .container{
+            display: flex;
+            flex-direction:row;
+            gap:  15px;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid white;
+            padding: 25px;
+            width: 75%;
+            margin: auto;
+            background-color: rgb(197, 184, 72);
+        }
+        img{
+            height: 250px;
+            width: 250px;
+            border-radius: 10px;
+        }
+        h3{
+            text-align: center;
+            text-decoration: underline;
+        }
+        .card{
+            padding: 25px;
+            border: 3px solid white;
+            margin: 30px;
+            transition: transform 0.3s ease; 
+            background-color:  rgb(207, 190, 39);;
+        }
+        .card:hover {
+             transform: scale(1.1);
+             cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(231, 231, 17); font-weight: bold; font-size: 50px;" >blink<span style="color: green;">it</span></h1>
+    <div class="container" >
+        <div class="card">
+            <img src = "bakery.png">
+            <h3>Bakery & Biscuits</h3>
+        </div>
+        <div class="card">
+            <img src="breakfast.png">
+            <h3>breakfast & Instant Foods</h3>
+        </div>
+        <div class="card">
+            <img src="chips.png">
+            <h3>Snacks & Munchies</h3>
+        </div>
+    </div>
+</body>
