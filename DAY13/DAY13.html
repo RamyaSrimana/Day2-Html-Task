@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #box {
+      width: 80%;
+      max-width: 600px;
+      margin: auto;
+      border: 3px solid black;
+    }
+
+    h1 {
+      font-size: 6vw;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      #box {
+        background-color: rgb(227, 128, 128);
+      }
+
+      p {
+        color: rgb(175, 36, 18);
+        font-style: italic;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-color: rgb(197, 213, 192);
+      }
+    }
+  </style>
+  <body>
+    <div>
+      <h1>🌌 Space & Universe</h1>
+    </div>
+    <p>
+      The universe is vast, mysterious, and full of wonders beyond imagination.
+      From tiny stars to massive galaxies, space continues to amaze scientists
+      and dreamers alike.
+    </p>
+    <div id="box">
+      <p>A box that takes up 80% of the screen width but no more than 600px</p>
+    </div>
+  </body>
+</html>
