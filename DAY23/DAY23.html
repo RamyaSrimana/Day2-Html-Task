@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cake Shop</title>
+</head>
+<body>
+
+<h1 id="title">🍰 Sweet Cake Shop</h1>
+<p id="desc">Click a cake to see details</p>
+
+<button onclick="choco()">Chocolate</button>
+<button onclick="vanilla()">Vanilla</button>
+<button onclick="blackforest()">Black Forest</button>
+
+<script>
+
+function choco() {
+  document.getElementById("title").innerText = "🍫 Chocolate Brownie Cake";
+  document.getElementById("desc").innerHTML =
+    "Rich, soft and full of chocolate flavor 🍫.<br>Perfect for chocolate lovers!";
+
+  document.getElementById("title").style.color = "brown";
+  document.getElementById("title").style.fontSize = "30px";
+
+  document.getElementById("desc").style.color = "black";
+  document.getElementById("desc").style.fontSize = "18px";
+
+  document.body.style.backgroundColor = "#f5e6d3";
+}
+
+function vanilla() {
+  document.getElementById("title").innerText = "🍦 Vanilla Cream Cake";
+  document.getElementById("desc").innerHTML =
+    "Light, fluffy and smooth vanilla taste 🤍.<br>Perfect for any celebration!";
+
+  document.getElementById("title").style.color = "goldenrod";
+  document.getElementById("title").style.fontSize = "30px";
+
+  document.getElementById("desc").style.color = "black";
+  document.getElementById("desc").style.fontSize = "18px";
+
+  document.body.style.backgroundColor = "#fff8dc";
+}
+
+function blackforest() {
+  document.getElementById("title").innerText = "🍒 Black Forest Cake";
+  document.getElementById("desc").innerHTML =
+    "Delicious mix of chocolate, cream and cherries 🍒.<br>A classic favorite for all!";
+
+  document.getElementById("title").style.color = "darkred";
+  document.getElementById("title").style.fontSize = "30px";
+
+  document.getElementById("desc").style.color = "black";
+  document.getElementById("desc").style.fontSize = "18px";
+
+  document.body.style.backgroundColor = "#ffe4e1";
+}
+
+</script>
+
+</body>
+</html>
