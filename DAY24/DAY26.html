@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>When You type Something in <span><u>textBox</u></span> it will display on the Screen :) </h1>
+    <input type="text" id = "text" placeholder="Enter Something" oninput="call()">
+    <p id = "textdisplay"></p>
+    <button id = "btn" >Change BackGround Colour</button>
+    <script>
+        function call(){
+              let text = document.getElementById("text").value;
+              let display = document.getElementById("textdisplay");
+              display.textContent = text;
+              display.style.fontStyle = "italic";
+              display.style.color = "Black";
+              display.style.fontSize = "30px";
+        }
+        let btn = document.getElementById("btn");
+        btn.addEventListener('click',function(e){
+            document.body.style.backgroundColor = "rgb(240, 64, 10)";
+        })
+    </script>
+</body>
+</html>
