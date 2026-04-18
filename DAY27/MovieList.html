@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+            gap : 35px ;
+            /* padding:12%; */
+        }
+        li{
+            border: 2px solid black;
+            padding: 20px;
+            background-color: rgb(0, 0, 0);
+            border: 2px solid white;
+            transition: transform 0.3s ease;
+        }
+        li:hover{
+            transform: scale(1.1);
+            background-color: rgb(31, 30, 30);
+            cursor: pointer;
+        }
+        img{
+            width: 200px;
+            height:300px;
+            border-radius: 4px;
+            border: 1px solid rgb(73, 67, 67);
+        }
+        p{
+            text-align: center;
+            font-weight: bolder;
+            color: aliceblue;
+        }
+        h1{
+            color: aliceblue;
+            text-align: center;
+            padding: 20px;
+            text-decoration: underline solid rgb(151, 148, 148);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie List</h1>
+    <ul id = "ul"></ul>
+    <script>
+    let ul = document.getElementById("ul");
+
+    let MovieList = ["Movie 1","Movie 2","Movie 3","Movie 4","Movie 5","Movie 6"];
+    let MovieSource = []; 
+
+    for (let i = 0; i < MovieList.length; i++) {
+        MovieSource[i] = 'img' + (i + 1) + '.png';
+    }
+
+    MovieList.forEach((movie, index) => {
+        let li = document.createElement('li');
+        let img = document.createElement('img');
+        let p = document.createElement('p');
+
+        img.src = MovieSource[index];
+        p.textContent = movie;
+
+        li.appendChild(img);
+        li.appendChild(p);
+        ul.appendChild(li);
+    });
+</script>
+</body>
+</html>

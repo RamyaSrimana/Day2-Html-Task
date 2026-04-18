@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px; 
+      }
+      body{
+        background-color: rgb(161, 161, 235);
+      }
+      input{
+        border-radius: 5px;
+        border: 3px solid rgb(238, 107, 107);
+        padding: 10px;
+      }
+      h1{
+        font-style: italic;
+        color: rgb(156, 100, 26);
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Search Your Name in the Input Box</h1>
+    <ul id="ul">
+      <li>Ishani</li>
+      <li>Arjun</li>
+      <li>Ananya</li>
+      <li>Vihaan</li>
+      <li>Kavya</li>
+    </ul>
+    <input type="text" id="input" placeholder="Search..." />
+    <script>
+      let ul = document.querySelectorAll("#ul li");
+      document.getElementById("input").addEventListener("input", function () {
+        let input = document.getElementById("input").value.toLowerCase();
+        ul.forEach((list) => {
+          let listLowerCase = list.textContent.toLowerCase();
+          if (listLowerCase.includes(input)) {
+            list.style.display = "block";
+          } else {
+            list.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
