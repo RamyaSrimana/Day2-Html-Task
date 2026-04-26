@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f7fa;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        li {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 150px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+        }
+
+        p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #cart_Count {
+            background-color: red;
+            padding: 4px 8px;
+            border-radius: 50%;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Online Store</h1>
+    <b>Cart <span id="cart_Count">0</span></b>
+</header>
+
+<main>
+    <ul id="productList"></ul>
+</main>
+
+<script>
+    let products = ["Good Day", "Hide & Seek", "Parle-G"];
+
+    let ul = document.getElementById("productList");
+
+    products.map((item) => {
+
+        let li = document.createElement("li");
+
+        let p = document.createElement("p");
+        p.innerText = item;
+
+        let button = document.createElement("button");
+        button.innerText = "Add to Cart";
+        button.onclick = addToCart;
+
+        li.appendChild(p);
+        li.appendChild(button);
+        ul.appendChild(li);
+    });
+
+    function addToCart() {
+        let countElement = document.getElementById('cart_Count');
+        let count = parseInt(countElement.textContent);
+        count++;
+        countElement.textContent = count;
+    }
+</script>
+
+</body>
+</html>
