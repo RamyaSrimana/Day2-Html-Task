@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treasure Hunt</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f9ff;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        background-color: aqua;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      #boat {
+        max-width: 400px;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #crew {
+        padding-left: 20px;
+      }
+
+      button {
+        margin: 10px 5px 0 0;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 6px;
+        background-color: #0077cc;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      button:hover {
+        background-color: #005fa3;
+      }
+
+      #message {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>🏴‍☠️ Treasure Hunt</h1>
+
+    <div id="boat">
+      <h3>Crew Members</h3>
+
+      <ul id="crew">
+        <li>Jack</li>
+        <li>Alice</li>
+        <li>Bob</li>
+        <li>Richard</li>
+      </ul>
+
+      <button onclick="directingTheRoute('Jack')">
+        Ask Jack
+      </button>
+
+      <button onclick="directingTheRoute('Alice')">
+        Ask Alice
+      </button>
+
+      <div id="message"></div>
+    </div>
+
+    <script>
+      function directingTheRoute(name) {
+        const message = document.getElementById("message");
+
+        let direction =
+          name === "Jack"
+            ? "Take the North route 🧭"
+            : "Take the South route 🌊";
+
+        message.textContent = `${name} says: ${direction}`;
+
+        console.log(`${name} says: ${direction}`);
+      }
+    </script>
+  </body>
+</html>
